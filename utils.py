@@ -728,3 +728,22 @@ async def check_verification(bot, userid):
                 return True
         else:
             return True
+async def get_short(link):
+    
+    url = f'https://kpslink.in/api'
+    params = {
+      'api': '0f58bd08240015b7e275101d7a47d2cd1e105b5d',
+      'url': link,
+    }
+    try:
+        async with aiohttp.ClientSession() as session:
+            async with session.get(url, params=params, raise_for_status=True, ssl=False) as response:
+                data = await response.json()
+                if data["status"] == "success":
+                    return data['shortenedUrl']
+                else:
+                    logger.error(f"Error: {data['message']}")
+                    return link
+    except Exception as e:
+        logger.error(e)
+        return link
