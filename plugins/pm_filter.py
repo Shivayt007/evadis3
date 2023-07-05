@@ -704,7 +704,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 else:
                     await query.answer(f"Hᴇʏ {query.from_user.first_name}, Tʜɪs Is Nᴏᴛ Yᴏᴜʀ Mᴏᴠɪᴇ Rᴇǫᴜᴇsᴛ. Rᴇǫᴜᴇsᴛ Yᴏᴜʀ's !", show_alert=True)
             else:
-                g =await get_short(f"https://telegram.dog/{temp.U_NAME}?start={ident}_{file_id}")
+                g =f"https://telegram.dog/{temp.U_NAME}?start={ident}_{file_id}"
                 capt = f_caption
                 capt = re.sub(r'http\S+', '', capt)
                 
