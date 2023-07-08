@@ -12,7 +12,7 @@ def is_enabled(value, default):
         return default
 
 # Bot information
-SESSION = environ.get('SESSION', 'Medearch')
+SESSION = environ.get('SESSION', 'Medisech')
 API_ID = int(21520120)
 API_HASH = '77ac921a78fc841990e04de9f5bcde1a'
 BOT_TOKEN = '5680417828:AAFW0DaGy0dc_kpLUdmlCRc3aBCJ8c59iio'
@@ -21,10 +21,10 @@ BOT_TOKEN = '5680417828:AAFW0DaGy0dc_kpLUdmlCRc3aBCJ8c59iio'
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = is_enabled((environ.get('USE_CAPTION_FILTER', 'True')), True)
 
-PICS = (environ.get('PICS', '')).split()
-NOR_IMG = environ.get("NOR_IMG", "")
-MELCOW_VID = environ.get("MELCOW_VID", "")
-SPELL_IMG = environ.get("SPELL_IMG", "")
+PICS = (environ.get('PICS', 'https://telegra.ph/file/8af59ac8a12110eaec85d.jpg')).split()
+NOR_IMG = environ.get("NOR_IMG", "https://telegra.ph/file/8af59ac8a12110eaec85d.jpg")
+MELCOW_VID = environ.get("MELCOW_VID", "https://telegra.ph/file/451f038b4e7c2ddd10dc0.mp4")
+SPELL_IMG = environ.get("SPELL_IMG", "https://telegra.ph/file/5e2d4418525832bc9a1b9.jpg")
 
 # Admins, Channels & Users
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '6142664843').split()]
@@ -39,7 +39,7 @@ support_chat_id = environ.get('SUPPORT_CHAT_ID')
 reqst_channel = environ.get('REQST_CHANNEL_ID')
 REQST_CHANNEL = int(reqst_channel) if reqst_channel and id_pattern.search(reqst_channel) else None
 SUPPORT_CHAT_ID = int(support_chat_id) if support_chat_id and id_pattern.search(support_chat_id) else None
-NO_RESULTS_MSG = is_enabled((environ.get("NO_RESULTS_MSG", 'False')), False)
+NO_RESULTS_MSG = is_enabled((environ.get("NO_RESULTS_MSG", 'True')), False)
 
 # MongoDB information
 DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://aibot:aibot@cluster0.jrx2kdn.mongodb.net/?retryWrites=true&w=majority")
