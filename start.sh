@@ -1,7 +1,7 @@
 if [ -z $UPSTREAM_REPO ]
 then
   echo "Cloning main Repository"
-  git clone -b main https://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@github.com/shivayt007/evadis2.git /DQTheFileDonorBot
+  git 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@github.com/shivayt007/evadis2.git /DQTheFileDonorBot
 else
   echo "Cloning Custom Repo from $UPSTREAM_REPO "
   git clone $UPSTREAM_REPO /DQTheFileDonorBot
