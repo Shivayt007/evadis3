@@ -12,7 +12,7 @@ def is_enabled(value, default):
         return default
 
 # Bot information
-SESSION = environ.get('SESSION', 'Medisearch')
+SESSION = environ.get('SESSION', 'Medearch')
 API_ID = int(21520120)
 API_HASH = '77ac921a78fc841990e04de9f5bcde1a'
 BOT_TOKEN = '5680417828:AAFW0DaGy0dc_kpLUdmlCRc3aBCJ8c59iio'
